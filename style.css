@@ -1,0 +1,78 @@
+#question {
+    padding: 1em;
+    font-size: 24px;
+    color: white;
+}
+
+#answer {
+    padding: .5em;
+    font-size: 24px;
+    color: white;
+}
+
+body {
+   background-color: black;
+   color: white;
+   text-align: center;
+   height: 100%;
+}
+
+#imageSpace {
+    background-color: black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#jeopard {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#randQues {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+    font-size: 24px;
+    width: 20%;
+}
+
+#revQues {
+    display: inline-block;
+    padding: .5em;
+}
+
+
+footer {
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(128, 0, 128, 0.5);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+
+}
+
+footer a {
+    padding: .4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: .4em;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: blue;
+    border-color: white;
+    color: rgb(255, 217, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover {
+    background-color: blueviolet;
+}

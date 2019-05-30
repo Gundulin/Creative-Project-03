@@ -1,4 +1,40 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Jeopardy</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!-- The Vue -->
+        <div id="app">
+            <div id="imageSpace">
+                <img id="jeopard" src="https://firebasestorage.googleapis.com/v0/b/cs-260-creative-projects.appspot.com/o/JeopardyBackground.jpg?alt=media&token=25685f21-3bf9-4767-b46a-5a1c8bd78905"
+                alt="JeopardyBackground">
+            </div>
+            <h1>Press the button to get a random Jeopardy styled question!</h1>
+            <div v-if="loading">
+                 <p>Loading question...</p>
+            </div>
+            <div v-else>
+                <button v-on:click="newQuestion" id="randQues">Random Question</button>
+                <div id="question" v-if="buttonPressed">
+                    <p>Category: {{currentQuestion.category}}</p>
+                    <p>{{currentQuestion.question}}</p>
+                </div> 
+                <div v-if="hidden">
+                    <button v-on:click="revealAnswer" id="revQues">Reveal Answer</button>
+                </div>
+                <div v-if="revealed">
+                    <button v-on:click="hideAnswer" id="revQues">Hide Answer</button>
+                    <p id="answer">{{currentQuestion.answer}}</p>
+            </div>
+        </div>
+        <footer>
+            <a id="github" href="https://github.com/Gundulin/Creative-Project-03">github</a>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
     
 </html>
